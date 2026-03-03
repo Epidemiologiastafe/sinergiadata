@@ -1,0 +1,684 @@
+/* ===============================
+   VARIABLES DE COLOR
+================================ */
+:root {
+  --azul-principal: #0F4C75;
+  --azul-secundario: #1B6B93;
+  --verde-claro: #9BEF9A;
+  --verde-medio: #7BC043;
+  --blanco: #FFFFFF;
+  --gris-fondo: #F4F6F8;
+  --gris-texto: #333333;
+}
+
+/* ===============================
+   ESTILOS GENERALES
+================================ */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Poppins, sans-serif;
+  background-color: var(--gris-fondo);
+  color: var(--gris-texto);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ===============================
+   HEADER / HERO
+================================ */
+header {
+  background-color: var(--azul-principal);
+  color: var(--blanco);
+  padding: 70px 20px;
+  text-align: center;
+}
+
+header img {
+  max-width: 130px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.3rem;
+}
+
+header p {
+  margin-top: 12px;
+  font-size: 1.1rem;
+}
+
+/* ===============================
+   HERO ESPECIAL
+================================ */
+
+
+.logo-hero {
+  max-width: 260px;
+  margin-bottom: 18px;
+}
+
+/* ===============================
+   NAVEGACIÓN
+================================ */
+nav {
+  background-color: var(--azul-secundario);
+  border-top: 4px solid var(--verde-medio);
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.menu > li {
+  position: relative;
+}
+
+.menu a {
+  display: block;
+  padding: 15px 20px;
+  color: var(--blanco);
+  font-weight: 600;
+}
+
+.menu a:hover {
+  background-color: #34495e;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  padding: 0;
+  background-color: #34495e;
+  min-width: 150px;
+  z-index: 1000;
+}
+
+.submenu li a {
+  padding: 10px 15px;
+}
+
+.menu li:hover > .submenu {
+  display: block;
+}
+
+/* Responsive: menú hamburguesa */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  padding: 15px;
+  color: var(--blanco);
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 900px) {
+  .menu {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--azul-secundario);
+  align-items: center;      /* 👈 esto centra horizontalmente */
+  text-align: center;       /* 👈 esto centra el texto */
+}
+
+.menu a {
+  width: 100%;
+}
+
+.menu > li {
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu > li {
+    width: 100%;
+  }
+
+  .menu li:hover > .submenu {
+    display: none;
+  }
+
+  .menu li .submenu {
+    position: relative;
+  }
+
+  .submenu-toggle {
+    float: right;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  nav {
+    position: relative;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+  }
+}
+
+/* ===============================
+   CONTENIDO GENERAL
+================================ */
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 50px 20px;
+}
+
+section {
+  margin-bottom: 60px;
+}
+
+h2 {
+  color: var(--azul-principal);
+  font-size: 1.9rem;
+}
+
+h3 {
+  color: var(--azul-secundario);
+}
+
+/* ===============================
+   BOTONES
+================================ */
+a.button {
+  display: inline-block;
+  background-color: var(--verde-medio);
+  color: var(--blanco);
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+a.button:hover {
+  background-color: var(--verde-claro);
+  color: var(--azul-principal);
+}
+
+.button.secondary {
+  background-color: transparent;
+  border: 2px solid var(--blanco);
+  color: var(--blanco);
+}
+
+.button.secondary:hover {
+  background-color: var(--blanco);
+  color: var(--azul-principal);
+}
+
+/* ===============================
+   FOOTER
+================================ */
+footer {
+  background-color: var(--azul-principal);
+  color: var(--blanco);
+  text-align: center;
+  padding: 25px;
+}
+
+
+/* ===============================
+   SERVICIOS – CARDS
+================================ */
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.servicio-card {
+  background-color: var(--blanco);
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.servicio-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+}
+
+.servicio-card h3 {
+  margin-top: 0;
+  color: var(--azul-principal);
+}
+
+/* ===============================
+   CTA
+================================ */
+.cta {
+  margin-top: 80px;
+  text-align: center;
+  background-color: var(--azul-principal);
+  color: var(--blanco);
+  padding: 60px 30px;
+  border-radius: 18px;
+}
+
+.cta h3 {
+  margin-top: 0;
+}
+
+.cta p {
+  margin-bottom: 25px;
+}
+
+/* ===============================
+   METODOLOGÍA
+================================ */
+.metodologia-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 35px;
+  margin-top: 40px;
+}
+
+.metodo-paso {
+  background-color: var(--blanco);
+  padding: 35px 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  position: relative;
+}
+
+.paso-numero {
+  position: absolute;
+  top: -18px;
+  left: 20px;
+  background-color: var(--verde-medio);
+  color: var(--blanco);
+  font-weight: bold;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.metodo-paso h3 {
+  margin-top: 20px;
+  color: var(--azul-principal);
+}
+
+/* ===============================
+   PIPELINE METODOLOGÍA
+================================ */
+.pipeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  margin: 80px 0;
+}
+
+.pipeline-step {
+  background-color: var(--blanco);
+  padding: 40px 30px;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  position: relative;
+}
+
+.pipeline-number {
+  position: absolute;
+  top: -18px;
+  left: 25px;
+  background-color: var(--verde-medio);
+  color: var(--blanco);
+  font-weight: bold;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pipeline-step h3 {
+  margin-top: 20px;
+  color: var(--azul-principal);
+}
+
+/* ===============================
+   PROCESO METODOLÓGICO
+================================ */
+.proceso {
+  position: relative;
+  margin: 90px 0;
+  padding-left: 30px;
+  border-left: 3px solid var(--verde-medio);
+}
+
+.proceso-paso {
+  position: relative;
+  margin-bottom: 60px;
+  padding-left: 40px;
+}
+
+.paso-num {
+  position: absolute;
+  left: -22px;
+  top: 0;
+  background-color: var(--verde-medio);
+  color: var(--blanco);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.proceso-paso h3 {
+  margin-top: 0;
+  color: var(--azul-principal);
+}
+
+/* ================================
+   CONTACTO MODERNO
+================================ */
+
+.contacto-form-modern {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 64px 56px;
+  background: linear-gradient(180deg, #ffffff 0%, #fafbff 100%);
+  border-radius: 28px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Título */
+.contacto-form-modern h2 {
+  text-align: center;
+  color: var(--azul-principal);
+  margin-bottom: 0.75rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* Bajada */
+.contacto-form-modern p {
+  text-align: center;
+  color: var(--gris-texto);
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  font-size: 1rem;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ================================
+   FORMULARIO
+================================ */
+
+.form-modern {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 2rem;
+}
+
+.form-modern .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Campo ancho */
+.form-modern .full-width {
+  grid-column: 1 / -1;
+}
+
+/* Labels */
+.form-modern label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+  color: var(--gris-texto);
+}
+
+/* Inputs y textarea */
+.form-modern input,
+.form-modern textarea {
+  padding: 14px 16px;
+  font-size: 0.95rem;
+  border-radius: 14px;
+  border: 1px solid #dcdfe8;
+  background-color: #ffffff;
+  transition: all 0.25s ease;
+  font-family: inherit;
+}
+
+/* Textarea */
+.form-modern textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+/* Focus */
+.form-modern input:focus,
+.form-modern textarea:focus {
+  outline: none;
+  border-color: var(--azul-principal);
+  box-shadow: 0 0 0 3px rgba(45, 72, 132, 0.12);
+}
+
+/* Placeholder */
+.form-modern input::placeholder,
+.form-modern textarea::placeholder {
+  color: #b0b4c0;
+}
+
+/* ================================
+   BOTÓN
+================================ */
+
+.form-modern button {
+  grid-column: 1 / -1;
+  margin-top: 1rem;
+  align-self: center;
+
+  padding: 14px 38px;
+  border-radius: 999px;
+  border: none;
+  background-color: var(--azul-principal);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Hover */
+.form-modern button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(45, 72, 132, 0.25);
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+  .contacto-form-modern {
+    padding: 48px 28px;
+  }
+
+  .form-modern {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* GRID EQUIPO */
+.equipo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin: 60px 0;
+  text-align: center;
+}
+
+/* TARJETA MIEMBRO */
+.miembro h3 {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.miembro p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* FOTO CIRCULAR */
+.foto-equipo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ===============================
+   PROBLEMAS – HOME
+================================ */
+
+/* ===============================
+   PROBLEMAS – HOME (MEJORADO)
+================================ */
+
+.problemas {
+  margin: 90px 0;
+  text-align: center;
+}
+
+.problemas h2 {
+  margin-bottom: 20px;
+}
+
+.problemas-intro {
+  max-width: 720px;
+  margin: 0 auto 50px auto;
+  font-size: 1.05rem;
+  color: var(--gris-texto);
+}
+
+.problemas-lista {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+  .problemas-lista {
+    grid-template-columns: 1fr;
+  }
+}
+
+.problema-item {
+  background-color: var(--blanco);
+  padding: 28px 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  font-weight: 500;
+  text-align: left;
+  border-left: 4px solid var(--verde-medio);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.problema-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.1);
+}
+
+.problemas-cierre {
+  max-width: 700px;
+  margin: 0 auto;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--azul-principal);
+}
+
+/* ===============================
+   AJUSTES FINOS MOBILE
+================================ */
+
+@media (max-width: 768px) {
+
+  /* HERO */
+  .hero-header {
+    padding: 30px 20px 35px 20px;
+    border-radius: 0 0 40px 40px;
+  }
+
+  .hero-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-header p {
+    font-size: 0.95rem;
+  }
+
+  /* MAIN */
+  main {
+    padding: 35px 18px;
+  }
+
+  section {
+    margin-bottom: 45px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  /* PROBLEMAS */
+  .problema-item {
+    padding: 22px;
+  }
+
+  /* SERVICIOS */
+  .servicio-card {
+    padding: 22px;
+  }
+
+  /* CTA */
+  .cta {
+    padding: 45px 20px;
+  }
+
+  /* NAV */
+  nav {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .menu-toggle {
+    top: 5px;
+  }
+
+}

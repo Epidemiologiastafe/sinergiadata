@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contacto – SINERGIA DATA</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <img src="img/Logo Sinergia_sinfondo_azul.png" alt="SINERGIA DATA">
+  <h1>SINERGIA DATA</h1>
+  <p>Epidemiología aplicada para decidir mejor</p>
+</header>
+
+<!-- NAV -->
+<nav>
+  <span class="menu-toggle">&#9776;</span>
+  <ul class="menu">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="servicios.html">Servicios</a></li>
+    <li><a href="metodologia.html">Metodología</a></li>
+    <li><a href="ambitos.html">Ámbitos</a></li>
+    <li><a href="proyectos.html">Proyectos</a></li>
+    <li><a href="equipo.html">Equipo</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+</nav>
+
+<main>
+  <!-- CONTACTO -->
+  <section class="contacto-form-modern">
+    <h2>Contacto</h2>
+
+    <p>
+      ¿Tenés datos y no sabés por dónde empezar?  
+      ¿Necesitás apoyo para analizar información o acompañar decisiones en salud?
+    </p>
+
+    <p>
+      Escribinos y contanos brevemente tu contexto, tu pregunta o el problema
+      que querés abordar. Te respondemos para pensar juntas/os el mejor enfoque.
+    </p>
+
+    <!-- FORMULARIO -->
+    <form
+      action="https://formspree.io/f/xkovwljv"
+      method="POST"
+      class="form-modern"
+    >
+
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          placeholder="Tu nombre"
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="organizacion">Organización</label>
+        <input
+          type="text"
+          id="organizacion"
+          name="organizacion"
+          placeholder="Tu organización"
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="tuemail@ejemplo.com"
+          required
+        >
+      </div>
+
+      <div class="form-group full-width">
+        <label for="mensaje">Mensaje</label>
+        <textarea
+          id="mensaje"
+          name="mensaje"
+          placeholder="Escribí tu mensaje..."
+          required
+        ></textarea>
+      </div>
+
+      <!-- Opciones Formspree -->
+      <input type="hidden" name="_subject" value="Nuevo mensaje desde la web">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="gracias.html">
+
+      <button type="submit">Enviar mensaje</button>
+    </form>
+
+    <p class="info-envio">
+      Respondemos en un plazo aproximado de 48 horas.
+    </p>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 SINERGIA DATA</p>
+</footer>
+
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.menu');
+
+  menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('active');
+  });
+</script>
+
+</body>
+</html>

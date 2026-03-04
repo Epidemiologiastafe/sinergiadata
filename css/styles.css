@@ -125,11 +125,23 @@ nav {
 
 /* Responsive: menú hamburguesa */
 .menu-toggle {
-  display: none;
+  display: none; /* Se oculta en PC */
   cursor: pointer;
-  padding: 15px;
-  color: var(--blanco);
-  font-size: 1.5rem;
+  padding: 10px;
+  /* Cambiamos el color a azul oscuro para que se vea bien */
+  color: var(--azul-principal); 
+  font-size: 1.8rem;
+  /* Le damos un fondo gris muy clarito para que parezca un botón */
+  background-color: #f0f0f0; 
+  border-radius: 5px;
+  line-height: 1;
+  z-index: 1001;
+}
+
+/* Cuando alguien lo toca en el celular */
+.menu-toggle:active {
+  background-color: var(--verde-medio);
+  color: white;
 }
 
 @media screen and (max-width: 900px) {
@@ -181,7 +193,13 @@ nav {
     display: block;
     position: absolute;
     right: 20px;
-    top: 10px;
+    top: 15px;
+  }
+  nav {
+    /* Esto asegura que la barra tenga altura suficiente para el botón */
+    min-height: 60px; 
+    display: flex;
+    align-items: center;
   }
 }
 

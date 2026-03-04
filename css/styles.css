@@ -29,27 +29,36 @@ a {
 /* ===============================
    HEADER / HERO
 ================================ */
-header {
+/* ===============================
+   HEADER UNIFICADO (CORREGIDO)
+================================ */
+header, .hero-header {
   background-color: var(--azul-principal);
+  /* Agregamos un degradado suave para que se vea más moderno */
+  background: linear-gradient(135deg, var(--azul-principal) 0%, #1b3a4b 100%);
   color: var(--blanco);
-  padding: 70px 20px;
+  padding: 40px 20px; /* Cambiamos % por px para que sea fijo y chico */
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-header img {
-  max-width: 130px;
+header img, .logo-hero {
+  max-width: 110px; /* Tamaño de logo unificado */
   height: auto;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
-header h1 {
+header h1, .hero-header h1 {
   margin: 0;
-  font-size: 2.3rem;
+  font-size: 1.8rem; /* Un tamaño más elegante */
 }
 
-header p {
-  margin-top: 12px;
-  font-size: 1.1rem;
+header p, .hero-header p {
+  margin-top: 8px;
+  font-size: 1rem;
+  opacity: 0.9;
 }
 
 /* ===============================

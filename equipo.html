@@ -4,13 +4,14 @@
   <meta charset="UTF-8">
   <title>Equipo – SINERGIA DATA</title>
   <link rel="stylesheet" href="css/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
 <!-- HEADER UNIFICADO -->
-<header>
-  <img src="img/Logo Sinergia_sinfondo_azul.png" alt="SINERGIA DATA" style="max-width:180px;">
-  <h1>SINERGIA DATA</h1>
+<header class="hero-header">
+  <img src="img/Logo Sinergia_sinfondo_azul.png" alt="SINERGIA DATA" class="logo-hero">
+  <h1>Equipo</h1>
   <p>Epidemiología aplicada para decidir mejor</p>
 </header>
 
@@ -100,6 +101,15 @@
 <footer>
   <p>© 2026 SINERGIA DATA</p>
 </footer>
+
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.menu');
+
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('active');
+  });
+</script>
 
 </body>
 </html>
